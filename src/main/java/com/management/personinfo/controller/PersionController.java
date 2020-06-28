@@ -37,4 +37,10 @@ public class PersionController {
         List<Persion> persions = persionService.findAll();
         return new ResponseEntity<>(persions, HttpStatus.OK);
     }
+
+    @PostMapping(value = "addPersion")
+    public ResponseEntity<Persion> addPersion(@RequestParam Persion persion) {
+        persionService.addPersion(persion);
+        return new ResponseEntity<>(persion, HttpStatus.OK);
+    }
 }

@@ -23,4 +23,10 @@ public interface PersionService {
      * @return
      */
      List<Persion>  findAll();
+
+    /**
+     * 添加
+     * @return
+     */
+    Persion addPersion(Persion persion);
 }

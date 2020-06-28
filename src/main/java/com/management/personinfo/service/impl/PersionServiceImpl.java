@@ -20,4 +20,10 @@ public class PersionServiceImpl  implements PersionService {
     public List<Persion> findAll() {
         return persionDao.findAll();
     }
+
+    @Override
+    public Persion addPersion(Persion persion) {
+        Persion persion1 = persionDao.saveAndFlush(persion);
+        return persion1;
+    }
 }
