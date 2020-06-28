@@ -1,6 +1,8 @@
 package com.management.personinfo.service;
 
 import com.management.personinfo.entity.Demo;
+import org.apache.catalina.User;
+
 /**
  * (Demo)表服务接口
  *
@@ -15,6 +17,8 @@ public interface DemoService {
      * @return 实例对象
      */
     Demo queryById( int id);
+
+    boolean addUser(User user);
 
 
 }

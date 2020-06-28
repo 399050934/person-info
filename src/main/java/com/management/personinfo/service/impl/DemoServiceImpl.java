@@ -3,11 +3,9 @@ package com.management.personinfo.service.impl;
 import com.management.personinfo.entity.Demo;
 import com.management.personinfo.dao.DemoDao;
 import com.management.personinfo.service.DemoService;
+import org.apache.catalina.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
-import javax.annotation.Resource;
-import java.util.List;
 
 /**
  * (Demo)表服务实现类
@@ -29,6 +27,11 @@ public class DemoServiceImpl implements DemoService {
     @Override
     public Demo queryById( int id) {
         return this.demoDao.getOne(id);
+    }
+
+    @Override
+    public boolean addUser(User user) {
+        return false;
     }
 
 

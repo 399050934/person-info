@@ -2,6 +2,7 @@ package com.management.personinfo.controller;
 
 import com.management.personinfo.entity.Demo;
 import com.management.personinfo.service.DemoService;
+import org.apache.catalina.User;
 import org.springframework.web.bind.annotation.*;
 
 
@@ -32,6 +33,16 @@ public class DemoController {
     @GetMapping("/selectOne")
     public Demo selectOne(@RequestParam Integer id) {
         return this.demoService.queryById(id);
+    }
+
+    /**
+     *
+     * @param user
+     * @return
+     */
+    @PostMapping("addUser")
+    public boolean addUser(User user) {
+        return this.demoService.addUser(user);
     }
 
 }
