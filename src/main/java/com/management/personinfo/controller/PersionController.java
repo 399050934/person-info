@@ -7,9 +7,6 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.util.ObjectUtils;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.servlet.resource.HttpResource;
-
-import javax.xml.ws.Response;
 import java.util.List;
 
 /**
@@ -32,13 +29,13 @@ public class PersionController {
         return new ResponseEntity<>(persion, HttpStatus.OK);
     }
 
-    @GetMapping("getAll")
+    @GetMapping("/getAll")
     public  ResponseEntity<List<Persion>> getAll() {
         List<Persion> persions = persionService.findAll();
         return new ResponseEntity<>(persions, HttpStatus.OK);
     }
 
-    @PostMapping(value = "addPersion")
+    @PostMapping(value = "/addPersion")
     public ResponseEntity<Persion> addPersion(@RequestParam Persion persion) {
         Persion persion1 = persionService.addPersion(persion);
         return new ResponseEntity<>(persion1, HttpStatus.OK);
