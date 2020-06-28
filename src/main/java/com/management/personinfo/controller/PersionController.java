@@ -40,7 +40,7 @@ public class PersionController {
 
     @PostMapping(value = "addPersion")
     public ResponseEntity<Persion> addPersion(@RequestParam Persion persion) {
-        persionService.addPersion(persion);
-        return new ResponseEntity<>(persion, HttpStatus.OK);
+        Persion persion1 = persionService.addPersion(persion);
+        return new ResponseEntity<>(persion1, HttpStatus.OK);
     }
 }
