@@ -45,4 +45,9 @@ public class DemoController {
         return this.demoService.addUser(user);
     }
 
+    @GetMapping("/test")
+    public  String test() {
+        return "hello world";
+    }
+
 }

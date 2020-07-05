@@ -1,14 +1,13 @@
 package com.management.personinfo.service;
 
-import com.management.personinfo.entity.Persion;
-import org.springframework.stereotype.Service;
+import com.management.personinfo.entity.PersonInfo;
 
 import java.util.List;
 
 /**
  * Persionservice
  */
-@Service(value = "persionService")
+
 public interface PersionService {
 
     /**
@@ -16,17 +15,22 @@ public interface PersionService {
      * @param id
      * @return
      */
-     Persion getOneById(String id);
+     PersonInfo getOneById(int id);
 
     /**
      * 批量全部
      * @return
      */
-     List<Persion>  findAll();
+     List<PersonInfo>  findAll();
 
     /**
      * 添加
      * @return
      */
-    Persion addPersion(Persion persion);
+    PersonInfo addPersion(PersonInfo personInfo);
+
+    /**
+     * 根据楼名分组，即根据小区划分
+     */
+    List<PersonInfo> groupByLouMing();
 }

@@ -1,8 +1,14 @@
 package com.management.personinfo.dao;
 
-import com.management.personinfo.entity.Persion;
+import com.management.personinfo.entity.PersonInfo;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
+import org.springframework.stereotype.Repository;
 
-public interface PersionDao  extends JpaRepository<Persion, Integer> {
-    Persion getOne(String id);
+import java.util.List;
+
+@Repository
+public interface PersionDao  extends JpaRepository<PersonInfo, Integer> {
+    @Query(value = "select * from personinfo group by louming", nativeQuery = true)
+    List<PersonInfo> groupByLouMing();
 }
