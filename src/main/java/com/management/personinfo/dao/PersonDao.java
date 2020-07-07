@@ -8,7 +8,7 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 
 @Repository
-public interface PersionDao  extends JpaRepository<PersonInfo, Integer> {
+public interface PersonDao extends JpaRepository<PersonInfo, Integer> {
     @Query(value = "select * from personinfo group by louming", nativeQuery = true)
     List<PersonInfo> groupByLouMing();
 }

@@ -8,7 +8,7 @@ import java.util.List;
  * Persionservice
  */
 
-public interface PersionService {
+public interface PersonService {
 
     /**
      * 根据Id单条查询
@@ -27,7 +27,7 @@ public interface PersionService {
      * 添加
      * @return
      */
-    PersonInfo addPersion(PersonInfo personInfo);
+    PersonInfo addPerson(PersonInfo personInfo);
 
     /**
      * 根据楼名分组，即根据小区划分
