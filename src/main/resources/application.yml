@@ -4,7 +4,7 @@ spring:
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
     password: 123456
-    url: jdbc:mysql://192.168.0.200:3306/persion?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai
+    url: jdbc:mysql://192.168.0.200:3306/person?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai
     username: root
   jpa:
     database-platform: org.hibernate.dialect.MySQL5Dialect
